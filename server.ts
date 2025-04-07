@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-    origin: 'https://backendsentiment-production.up.railway.app',
+    origin: 'https://sentiment-analysis-app-phi.vercel.app',
 }));
 app.use(express.json());
 
