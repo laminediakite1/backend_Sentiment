@@ -7,6 +7,9 @@ require('dotenv').config();
 const app = express();
 app.use(cors({
     origin: 'https://sentiment-analysis-app-phi.vercel.app',
+    methods: ['POST', 'GET', 'OPTIONS'], // Ajouter OPTIONS pour le preflight
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true // Si vous utilisez des cookies/tokens
 }));
 app.use(express.json());
 
